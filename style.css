@@ -1,0 +1,97 @@
+:root {
+    --tt-pink: #FE2C55;
+    --tt-gray: #f1f1f2;
+}
+
+body {
+    font-family: 'Sofia Sans', sans-serif;
+    padding-top: 80px;
+    background-color: #fff;
+    color: #121212;
+}
+
+.tt-pink-bg {
+    background-color: var(--tt-pink) !important;
+    border: none;
+}
+
+.tt-pink-bg:hover {
+    background-color: #e62a4d !important;
+}
+
+.search-bar-container {
+    width: 360px;
+}
+
+.profile-container {
+    max-width: 1000px;
+}
+
+.profile-avatar {
+    width: 116px;
+    height: 116px;
+    object-fit: cover;
+}
+
+.tab-item {
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.active-tab {
+    color: #000 !important;
+}
+
+.active-tab::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+.video-card {
+    position: relative;
+    aspect-ratio: 3/4;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.video-card:hover img {
+    transform: scale(1.05);
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+@media (max-width: 768px) {
+    .profile-avatar {
+        width: 90px;
+        height: 90px;
+    }
+    .search-bar-container {
+        display: none !important;
+    }
+}
